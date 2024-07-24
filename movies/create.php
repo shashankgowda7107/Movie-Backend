@@ -11,6 +11,7 @@ include('function.php');
 
 $requestMethod = $_SERVER["REQUEST_METHOD"];
 
+// Handle OPTIONS request
 if ($requestMethod === 'OPTIONS') {
     // Respond to preflight request
     header('HTTP/1.1 204 No Content');
