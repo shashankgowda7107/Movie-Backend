@@ -19,7 +19,7 @@ function storelang($storelang){
     if(empty(trim($lan_name))){
         return error422('Enter your name');
     } else {
-        $query = "INSERT INTO language (lan_name) VALUES ('$lan_name')";
+        $query = "INSERT INTO languages (lan_name) VALUES ('$lan_name')";
         $result = mysqli_query($conn, $query);
 
         if($result){
@@ -43,7 +43,7 @@ function storelang($storelang){
 function getLanguagesList(){
     global $conn;
     
-    $query = 'select * from language';
+    $query = 'select * from languages';
     $query_run = mysqli_query($conn, $query);
     
     if($query_run){

@@ -54,7 +54,7 @@ return error422('enter movie name');
 function getLanguagesList(){
     global $conn;
     
-    $query = 'select m.*,l.* from language l inner join movies m on m.lan_id=l.lan_id';
+    $query = 'select m.*,l.* from languages l inner join movies m on m.lan_id=l.lan_id';
     $query_run = mysqli_query($conn, $query);
     
     if($query_run){
